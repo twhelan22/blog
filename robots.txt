@@ -1,1 +1,1 @@
-Sitemap: https://twhelan22.github.io/blog/sitemap.xml
+Sitemap: https://thomaswhelan.com/sitemap.xml
