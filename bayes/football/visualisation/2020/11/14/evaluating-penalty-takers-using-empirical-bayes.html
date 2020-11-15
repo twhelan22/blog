@@ -71,25 +71,31 @@ window.onload = wrap_img;
 </head>
 <body><header class="site-header">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">Tom Whelan&#39;s blog</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/">Tom Whelan's blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
         <label for="nav-trigger">
           <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
             </svg>
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/about/">About Me</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
-      </nav></div>
+        <div class="trigger">
+<a class="page-link" href="/about/">About Me</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a>
+</div>
+      </nav>
+</div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Evaluating penalty takers using empirical Bayes estimation</h1><p class="page-description">After using empirical Bayes estimation to model predicted penalty conversion rate, we take a look at the best and worst penalty takers, investigate Manchester City and Fulham's struggles from spot kicks, and use our new estimate to simulate the Euro 96 penalty shootout.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-11-14T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Evaluating penalty takers using empirical Bayes estimation</h1>
+<p class="page-description">After using empirical Bayes estimation to model predicted penalty conversion rate, we take a look at the best and worst penalty takers, investigate Manchester City and Fulham's struggles from spot kicks, and use our new estimate to simulate the Euro 96 penalty shootout.</p>
+<p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-11-14T00:00:00-06:00" itemprop="datePublished">
         Nov 14, 2020
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -102,13 +108,13 @@ window.onload = wrap_img;
 </span></p>
 
     
-      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i> 
       
         <a class="category-tags-link" href="/categories/#Bayes">Bayes</a>
-        &nbsp;
+         
       
         <a class="category-tags-link" href="/categories/#football">football</a>
-        &nbsp;
+         
       
         <a class="category-tags-link" href="/categories/#visualisation">visualisation</a>
         
@@ -129,7 +135,7 @@ window.onload = wrap_img;
           
           <div class="px-2">
     <a href="https://colab.research.google.com/github/twhelan22/blog/blob/master/_notebooks/2020-11-14-evaluating-penalty-takers-using-empirical-bayes.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/assets/badges/colab.svg" alt="Open In Colab"/>
+        <img class="notebook-badge-image" src="/assets/badges/colab.svg" alt="Open In Colab">
     </a>
 </div>
         </div>
@@ -138,22 +144,25 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
 <li class="toc-entry toc-h1"><a href="#Why-do-we-assume-every-player-is-equally-skilled-from-the-penalty-spot?">Why do we assume every player is equally skilled from the penalty spot? </a></li>
-<li class="toc-entry toc-h1"><a href="#Empirical-Bayes-estimation">Empirical Bayes estimation </a>
+<li class="toc-entry toc-h1">
+<a href="#Empirical-Bayes-estimation">Empirical Bayes estimation </a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#Estimate-a-prior-from-the-data">Estimate a prior from the data </a></li>
 <li class="toc-entry toc-h2"><a href="#Visualising-the-effects-of-empirical-Bayes">Visualising the effects of empirical Bayes </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h1"><a href="#Who-are-the-best-and-worst-penalty-takers?">Who are the best and worst penalty takers? </a>
+<li class="toc-entry toc-h1">
+<a href="#Who-are-the-best-and-worst-penalty-takers?">Who are the best and worst penalty takers? </a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#Is-Lionel-Messi-'phenomenally-bad'-at-penalties?">Is Lionel Messi &#39;phenomenally bad&#39; at penalties? </a></li>
+<li class="toc-entry toc-h2"><a href="#Is-Lionel-Messi-'phenomenally-bad'-at-penalties?">Is Lionel Messi 'phenomenally bad' at penalties? </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#Are-Manchester-City-bad-at-penalties?">Are Manchester City bad at penalties? </a></li>
-<li class="toc-entry toc-h1"><a href="#Why-isn't-Aleksandar-Mitrović-taking-penalties-for-Fulham?">Why isn&#39;t Aleksandar Mitrović taking penalties for Fulham? </a></li>
+<li class="toc-entry toc-h1"><a href="#Why-isn't-Aleksandar-Mitrovi%C4%87-taking-penalties-for-Fulham?">Why isn't Aleksandar Mitrović taking penalties for Fulham? </a></li>
 <li class="toc-entry toc-h1"><a href="#Are-England-destined-to-lose-to-Germany-in-a-semi-final-shootout?">Are England destined to lose to Germany in a semi-final shootout? </a></li>
 <li class="toc-entry toc-h1"><a href="#Conclusion">Conclusion </a></li>
-</ul><!--
+</ul>
+<!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -2085,9 +2094,9 @@ with a predicted penalty conversion rate of 74.34%!
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>At this point it seems inevitable to most England fans that every major tournament will end in a penalty shootout loss to Germany in the semis.</p>
+<p>At this point it seems inevitable to most England fans that every major tournament will end in a penalty shootout loss to Germany in the semis <img class="emoji" title=":trollface:" alt=":trollface:" src="https://github.githubassets.com/images/icons/emoji/trollface.png" height="20" width="20"></p>
 <p><img src="https://i.pinimg.com/originals/3d/c9/c2/3dc9c27a55dccd132c7e545c6da3e473.jpg" alt=""></p>
-<p>Let's have a look at the Euro 96 shootout and see whether that's the case.</p>
+<p>Let's have a look at the Euro 96 shootout and see whether that's really the case.</p>
 
 </div>
 </div>
@@ -2288,7 +2297,7 @@ with a predicted penalty conversion rate of 74.34%!
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It looks like England actually had some good penalty takers available, particularly Shearer who has one of the highest predicted conversion rates we have found so far. Robbie Fowler was still young at the time but it's notable that England didn't choose to bring him on just before the shootout despite having three substitutions remaining, since he was prolific from the spot later in his career.</p>
+<p>It looks like England actually had some good penalty takers available, particularly Shearer who has one of the highest predicted conversion rates we have found so far. Robbie Fowler was still young at the time, but it's notable that England didn't choose to bring him on just before the shootout despite having three substitutions remaining, since he was prolific from the spot later in his career.</p>
 
 </div>
 </div>
@@ -2692,14 +2701,9 @@ Team A wins! (8-7)
 
 
 
-  </div><!-- from https://github.com/utterance/utterances -->
-<script src="https://utteranc.es/client.js"
-        repo="twhelan22/blog"
-        issue-term="title"
-        label="blogpost-comment"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
+  </div>
+<!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js" repo="twhelan22/blog" issue-term="title" label="blogpost-comment" theme="github-light" crossorigin="anonymous" async>
 </script><a class="u-url" href="/bayes/football/visualisation/2020/11/14/evaluating-penalty-takers-using-empirical-bayes.html" hidden></a>
 </article>
       </div>
@@ -2723,7 +2727,11 @@ Team A wins! (8-7)
       </div>
     </div>
 
-    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/twhelan22" title="twhelan22"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/tom_whelan" title="tom_whelan"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+    <div class="social-links">
+<ul class="social-media-list">
+<li><a rel="me" href="https://github.com/twhelan22" title="twhelan22"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li>
+<li><a rel="me" href="https://twitter.com/tom_whelan" title="tom_whelan"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li>
+</ul>
 </div>
 
   </div>
