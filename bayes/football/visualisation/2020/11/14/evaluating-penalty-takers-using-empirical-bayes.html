@@ -541,7 +541,8 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">teams</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'team'</span><span class="p">)[[</span><span class="s1">'penalties_scored'</span><span class="p">,</span> <span class="s1">'penalties_taken'</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 <span class="n">conversion_rate</span><span class="p">(</span><span class="n">teams</span><span class="p">)</span>
-<span class="n">teams</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="n">teams</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">teams</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'conversion_rate'</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -555,7 +556,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea output_execute_result">
+<div class="output_html rendered_html output_subarea ">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -634,33 +635,6 @@ window.onload = wrap_img;
 </div>
 
 </div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<details class="description">
-      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
-        <p></p>
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">teams</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'conversion_rate'</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-    </details>
-<div class="output_wrapper">
-<div class="output">
 
 <div class="output_area">
 
