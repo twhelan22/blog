@@ -4,7 +4,7 @@ title: 👤 About Me
 permalink: /about/
 ---
 
-Tom Whelan
+## Tom Whelan
 
 ![Email](/images/email_icon.png) [tom.whelan@hotmail.co.uk](mailto:tom.whelan@hotmail.co.uk) ![Twitter](/images/twitter_icon.png) [@tom_whelan](https://twitter.com/tom_whelan) ![Github](/images/github_icon.png) [twhelan22](https://github.com/twhelan22) [kaggle](/images/kaggle_icon.png) [twhelan](https://www.kaggle.com/twhelan) 
 
