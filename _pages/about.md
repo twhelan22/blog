@@ -1,9 +1,10 @@
 ---
 layout: page
-title: About Me
+title: 👤 About Me
 permalink: /about/
 ---
 
-Hi, I'm Tom Whelan, a data scientist from the UK. I created this page to write about various projects I have worked on. If you're looking for my series teaching machine learning with Python through a fantasy football lens, you can find it at [fantasyfutopia.com.](http://www.fantasyfutopia.com/python-for-fantasy-football-introduction/)
+Tom Whelan
+![Email](/images/email_icon.png) [tom.whelan@hotmail.co.uk](mailto:tom.whelan@hotmail.co.uk) ![Twitter](/images/twitter_icon.png) [@tom_whelan](https://twitter.com/tom_whelan) ![Github](/images/github_icon.png) [twhelan22](https://github.com/twhelan22) [kaggle](/images/kaggle_icon.png) [twhelan](https://www.kaggle.com/twhelan) 
 
-Feel free to get in touch with me on Twitter ([@tom_whelan](https://twitter.com/tom_whelan)) or via email ([tom.whelan@hotmail.co.uk](mailto:tom.whelan@hotmail.co.uk)).
+I created this page to write about various data science and machine learning projects I have worked on. Previously I wrote a series teaching machine learning with Python through a fantasy football lens, which can be found at [fantasyfutopia.com](http://www.fantasyfutopia.com/python-for-fantasy-football-introduction/).
