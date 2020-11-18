@@ -1319,13 +1319,13 @@ New estimate = (alpha0 + penalties_scored) / (alpha0 + beta0 + penalties_taken)
 <span class="n">missed</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#@param {type:"slider", min:0, max:150, step:1}</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Scored:'</span><span class="p">,</span> <span class="n">scored</span><span class="p">,</span> <span class="s1">'Missed:'</span><span class="p">,</span> <span class="n">missed</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Predicted conversion rate = </span><span class="si">{:.2%}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">predicted_conversion</span><span class="p">(</span><span class="n">scored</span><span class="p">,</span> <span class="n">scored</span> <span class="o">+</span> <span class="n">missed</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Predicted conversion rate: </span><span class="si">{:.2%}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">predicted_conversion</span><span class="p">(</span><span class="n">scored</span><span class="p">,</span> <span class="n">scored</span> <span class="o">+</span> <span class="n">missed</span><span class="p">)))</span>
 
 <span class="c1"># Alternative method (non-Colab Jupyter notebooks)</span>
 <span class="k">def</span> <span class="nf">player_slider</span><span class="p">():</span>
     <span class="k">def</span> <span class="nf">slider</span><span class="p">(</span><span class="n">scored</span><span class="p">,</span> <span class="n">missed</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">'Scored:'</span><span class="p">,</span> <span class="n">scored</span><span class="p">,</span> <span class="s1">'Missed:'</span><span class="p">,</span> <span class="n">missed</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">'Predicted conversion rate = </span><span class="si">{:.2%}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">predicted_conversion</span><span class="p">(</span><span class="n">scored</span><span class="p">,</span> <span class="n">scored</span> <span class="o">+</span> <span class="n">missed</span><span class="p">)))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'Predicted conversion rate: </span><span class="si">{:.2%}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">predicted_conversion</span><span class="p">(</span><span class="n">scored</span><span class="p">,</span> <span class="n">scored</span> <span class="o">+</span> <span class="n">missed</span><span class="p">)))</span>
     <span class="n">interact</span><span class="p">(</span><span class="n">slider</span><span class="p">,</span> <span class="n">scored</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">65</span><span class="p">),</span> 
             <span class="n">missed</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
 </pre></div>
@@ -1342,7 +1342,7 @@ New estimate = (alpha0 + penalties_scored) / (alpha0 + beta0 + penalties_taken)
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Scored: 65 Missed: 0
-Predicted conversion rate = 91.57%
+Predicted conversion rate: 91.57%
 </pre>
 </div>
 </div>
