@@ -18,7 +18,7 @@
   
       ,"page1": {
           "title": "👤 About Me",
-          "content": "Tom Whelan . tom.whelan@hotmail.co.uk · @tom_whelan · twhelan22 · twhelan . I created this page to write about various data science and machine learning projects I have worked on. Previously I wrote a series teaching machine learning with Python through a fantasy football lens, which can be found at fantasyfutopia.com. .",
+          "content": "Tom Whelan . tom.whelan@hotmail.co.uk · @tom_whelan · twhelan22 I created this page to write about various data science and machine learning projects I have worked on. Previously I wrote a series teaching machine learning with Python through a fantasy football lens, which can be found at [fantasyfutopia.com](http://www.fantasyfutopia.com/python-for-fantasy-football-introduction/). .",
           "url": "https://www.thomaswhelan.com/about/",
           "relUrl": "/about/",
           "date": ""
